@@ -13,11 +13,18 @@ const (
 
 	// Identifiers + literals
 	IDENT = "IDENT" // add, foobar, x, y
-	INT    = "INT"   // 1234
+	INT   = "INT"   // 1234
 
 	// Operators
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
+
+	LT = "<"
+	GT = ">"
 
 	// Delimiters
 	COMMA     = ","

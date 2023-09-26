@@ -40,6 +40,7 @@ func (p *Program) String() string {
 	return out.String()
 }
 
+// fulfill ast.Expression interface
 type Identifier struct {
 	Token token.Token // the token.IDENT token
 	Value string
@@ -102,4 +103,20 @@ func (es *ExpressionStatement) String() string {
 		return es.Expression.String()
 	}
 	return ""
+}
+
+// fulfill ast.Expression interface
+type IntegerLiteral struct {
+	Token token.Token
+	Value int64
+}
+
+func (il *IntegerLiteral) expressionNode() {}
+
+func (il *IntegerLiteral) TokenLiteral() string {
+	return il.Token.Literal
+}
+
+func (il *IntegerLiteral) String() string {
+	return il.Token.Literal
 }

@@ -34,8 +34,8 @@ type Parser struct {
 }
 
 type (
-	prefixParseFn func() ast.Expression
-	infixParseFn  func(ast.Expression) ast.Expression
+	prefixParseFn func() ast.Expression               // nuds (null denotations)
+	infixParseFn  func(ast.Expression) ast.Expression // leds (left denotations)
 )
 
 func New(l *lexer.Lexer) *Parser {
